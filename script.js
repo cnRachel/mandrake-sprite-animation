@@ -34,6 +34,11 @@ window.addEventListener('load', function() {
             this.frameX = this.frame % 18;
             this.frameY = Math.floor(this.frame / 18);
         }
+        setAnimation(newMinFrame, newMaxFrame) {
+            this.minFrame = newMinFrame;
+            this.maxFrame = newMaxFrame;
+            this.frame = this.minFrame;
+        }
     }
 
     const mandrake = new Mandrake(canvas.width, canvas.height);
@@ -46,4 +51,29 @@ window.addEventListener('load', function() {
     }
 
     animate();
+
+    const all = document.getElementById('all');
+    all.addEventListener('click', function() {
+        mandrake.setAnimation(0, 355);
+    });
+
+    const grow = document.getElementById('grow');
+    grow.addEventListener('click', function() {
+        mandrake.setAnimation(0, 75);
+    });
+
+    const wink = document.getElementById('wink');
+    wink.addEventListener('click', function() {
+        mandrake.setAnimation(76, 112);
+    });    
+
+    const float = document.getElementById('float');
+    float.addEventListener('click', function() {
+        mandrake.setAnimation(113, 262);
+    });
+
+    const hide = document.getElementById('hide');
+    hide.addEventListener('click', function() {
+        mandrake.setAnimation(263, 355);
+    });
 });
