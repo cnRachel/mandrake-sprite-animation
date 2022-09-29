@@ -2,6 +2,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
+}
+
+body {
+    background-image: url('/images/105_mushroom_background.png');    
 }
 
 #mandrake {
@@ -9,6 +14,7 @@
 }
 
 #container {
+    background-color: white;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -24,14 +30,16 @@
 
 #controls {
     font-family: 'Bangers', cursive;
-    font-size: 40px;
+    font-size: 20px;
     margin: 10px;
 }
 #controls > p {
-    font-size: 60px;
+    font-size: 40px;
 }
 
 #canvas1 {
     box-shadow: inset 5px 5px 5px black;
+    background-image: url('/images/105_mushroom_background.png');
+    background-position: 90%;
 }
 

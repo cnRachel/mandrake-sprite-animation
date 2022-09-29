@@ -2,7 +2,7 @@ window.addEventListener('load', function() {
     const canvas = document.getElementById('canvas1');
     const ctx = canvas.getContext('2d');
     canvas.width = 500;
-    canvas.height = 500;
+    canvas.height = 300;
 
     class Mandrake {
         constructor(canvasWidth, canvasHeight) {
@@ -15,7 +15,7 @@ window.addEventListener('load', function() {
             this.height = this.spriteHeight;
             this.scale = 1;
             this.x = this.canvasWidth/2 - this.width * this.scale/2;
-            this.y = this.canvasHeight/2 - this.height * this.scale/2;
+            this.y = 0;
             this.minFrame = 0;
             this.maxFrame = 355;
             this.frame = 0;
